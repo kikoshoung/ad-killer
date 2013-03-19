@@ -7,7 +7,7 @@ A bookmarklet for web browser to kill rude advertisement.
 
 ##使用方法
 
-请前往<a target="_blank" href='javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var i=document.createElement("script"),e=document.createElement("div"),o=document.body,d=1,n=d?"https://raw.github.com/kikoshoung/ad-killer/master":"http://localhost";i.src=n+"/minified/ad-killer.min.js",e.id="ad-killer-panel",e.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;",e.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",o.appendChild(i),o.appendChild(e)})();'>我的主页</a>查看使用方法。
+请前往<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>查看使用方法。
 
 ##产生背景
 
