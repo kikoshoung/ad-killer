@@ -48,7 +48,8 @@
 				}
 
 				// filter out fullscreen elements
-				if((positionType === 'absolute' || positionType === 'fixed') && _fullscreen[0] === parseInt(child.style.clientWidth) && _fullscreen[1] <= parseInt(child.style.clientHeight)){
+				// if((positionType === 'absolute' || positionType === 'fixed') && _fullscreen[0] === parseInt(child.style.clientWidth) && _fullscreen[1] <= parseInt(child.style.clientHeight)){
+				if(_fullscreen[0] === parseInt(child.style.clientWidth) && _fullscreen[1] <= parseInt(child.style.clientHeight)){
 					_suspectableDoms.push(child);
 					continue;
 				}
