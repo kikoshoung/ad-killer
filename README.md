@@ -21,7 +21,7 @@ PS：优雅的广告和一些不影响使用的广告我并没有处理。一是
 
 这是大名鼎鼎的“人人影视”，页面中左右两边的广告以及右下角的广告，挡住了页面的不少面积。
 
-<img src="https://github.com/kikoshoung/ad-killer/blob/master/img/ad-killer-sample.jpg">
+<img src="https://raw.github.com/kikoshoung/ad-killer/master/img/ad-killer-sample.jpg">
 
 对于某些爱干净的人来说，这简直尼玛阿西吧！
 
@@ -29,7 +29,7 @@ PS：优雅的广告和一些不影响使用的广告我并没有处理。一是
 
 这是小有名气的“电影天堂”，页面中除了右下角乱入的广告之外，还有一个宇宙超级不要脸的隐形全屏广告！
 
-<img src="https://github.com/kikoshoung/ad-killer/blob/master/img/ad-killer-sample2.jpg">
+<img src="https://raw.github.com/kikoshoung/ad-killer/master/img/ad-killer-sample2.jpg">
 
 大家注意鼠标的状态，并没有像平常遇到链接时的状态那样（变成手形鼠标、多了下划线、文字颜色有所改变）。那这是为什么呢？其实是因为该网站嵌了一种宇宙超级不要脸的隐形全屏广告！不管怎么样，你都必须点击一次页面触发了广告后才能正常使用你需要的功能。
 
