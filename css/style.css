@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.content-wrapper{
+	width: 960px;
+	margin: 100px auto;
+}
+.content-wrapper img{
+	max-width: 600px;
+}

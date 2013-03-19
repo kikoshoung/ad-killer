@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8;">
+		<title>Ad-killer Guide</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/frame.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="content-wrapper">
+			<h1>广告杀手（专杀粗暴乱入的广告）</h1>
+			<div class="block">
+				<h2>使用方法</h2>
+				<h4>第1步</h4>
+				<p>将此链接存储为书签：<a href='javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var o=document.createElement("script"),i=document.createElement("div"),t=document.body,e=1,n=e?"http://kikoshoung.me":"http://localhost";"https:"===window.location.protocol&&(n="https://raw.github.com/kikoshoung/kikoshoung.github.com/master"),o.src=n+"/dist/component/ad-killer.js",i.id="ad-killer-panel",i.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: white; color: black; font-size: 12px;",i.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",t.appendChild(o),t.appendChild(i)})();'>广告杀手</a>
+				<br/>* 如果你使用Chrome、Firefox等高端浏览器，你可以试着直接拖动链接到浏览器的书签栏来保存书签；第一种方法行不通的浏览器请Google一下如何添加链接到书签。</p>
+				<p></p>
+
+				<h4>第2步</h4>
+				<p>打开你要浏览的页面，如<a target="_blank" href="http://www.yyets.com">人人影视</a>、<a target="_blank" href="http://www.dytt8.net">电影天堂</a></</p>
+				<h4>第3步</h4>
+				<p>来到我们需要的页面后，点击一下刚刚存放的“广告杀手”的书签
+				<br/>* 网速稍微快点儿、电脑配置稍微高点儿，杀除广告那是瞬间的事儿；即使网速、配置不是很叼，那也是秒秒钟的事儿。</p>
+			</div>
+			<div class="block">
+				<h2>产生背景</h2>
+				<p>大家有木有在浏览一些网站的时候，经常遇到一些粗暴乱入的广告？他们不是不痛不痒地挡住了你的操作区域就是极其无耻的给你埋下了地雷。其实哥也忍他们好久了，所以一气之下做了个小程序，专治这种粗暴乱入的小广告。</p>
+				<p>PS：优雅的广告和一些不影响使用的广告我并没有处理。一是实现起来很困难，因为广告形式太多；二是因为做人不能太绝，人家免费给你用功能，赚点儿广告费也是应该的。</p>
+			</div>
+			<div class="block">
+				<h2>案例展示</h2>
+				<h4>案例1</h4>
+				<p>这是大名鼎鼎的“人人影视”，页面中左右两边的广告以及右下角的广告，挡住了页面的不少面积。</p>
+				<p>对于某些爱干净的人来说，这简直尼玛阿西吧！</p>
+				<img width="100%" src="img/ad-killer-sample.jpg">
+
+				<h4 class="mt-l">案例2</h4>
+				<p>这是小有名气的“电影天堂”，页面中除了右下角乱入的广告之外，还有一个宇宙超级不要脸的隐形全屏广告！</p>
+				<p>大家注意鼠标的状态，并没有像平常遇到链接时的状态那样（变成手形鼠标、多了下划线、文字颜色有所改变）。那这是为什么呢？其实是因为该网站嵌了一种宇宙超级不要脸的隐形全屏广告！不管怎么样，你都必须点击一次页面触发了广告后才能正常使用你需要的功能。</p>
+				<p>对于某些平生最讨厌被欺骗或是生怕链接有病毒的人来说，这也简直尼玛阿西吧！</p>
+				<img width="100%" src="img/ad-killer-sample2.jpg">
+			</div>
+			<div class="block">
+				<h2>关于“广告杀手”</h2>
+				<p>广告杀手的原理其实就是遍历了一下 DOM 结构，然后套用一下黑名单，看当前 DOM 是否有嫌疑。有的话就列入到杀除队列，待到遍历完成之后，将杀除队列的 DOM 全部删除以达到清除广告的效果。</p>
+				<p>可能大家也发现了，最重要的是黑名单，所以在这里我鼓励大家多多使用“广告杀手”书签，如果当你发现了无法清除的粗暴广告，请及时反馈给我，反馈的功能我随后会加入到书签内，谢谢大家的支持~</p>
+			</div>
+		</div>
+	</body>
+</html>
