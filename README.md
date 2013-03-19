@@ -1,33 +1,16 @@
-ad-killer
-=========
+广告杀手（Ad-killer）
+==================
 
-A bookmarklet for web browser to kill rude advertisement.
+一个清除粗暴乱入广告的浏览器标签。
 
-IntroJs Widget for Yii php framework
+##使用方法
+#第1步
+将此链接存储为书签：广告杀手 
+* 如果你使用Chrome、Firefox等高端浏览器，你可以试着直接拖动链接到浏览器的书签栏来保存书签；第一种方法行不通的浏览器请Google一下如何添加链接到书签。
 
-IntroJs is an open source project by <a href="http://usabli.ca/">usabli.ca</a> team.
+#第2步
+打开你要浏览的页面，如人人影视、电影天堂
 
-It introduced itself by:
-
-    Better introductions for websites and features with a step-by-step guide for your projects.
-
-read more about IntroJs <a href="https://github.com/usablica/intro.js">here</a>.
-
-
-
-##Setup:
-extract introjs folder under protected/extentions folder
-
-##Usage:
-in view files
-
-```php
-$this->widget('application.extensions.introjs.IntroJs',array(
-    'data'=>array(
-        array('id'=>'introID1','step'=>1,'intro'=>'Hello World!'),
-        array('id'=>'IntroID2','step'=>2,'intro'=>'Yii widget powered By Mohammad Moein Hosseini Manesh'),
-        /* all step and data should be defined here*/
-        array('id'=>'introIDStart','start'=>true), // define one element as starter
-    )
-));
-```
+#第3步
+来到我们需要的页面后，点击一下刚刚存放的“广告杀手”的书签 
+* 网速稍微快点儿、电脑配置稍微高点儿，杀除广告那是瞬间的事儿；即使网速、配置不是很叼，那也是秒秒钟的事儿。
