@@ -7,8 +7,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'minified/ad-killer-install.js': 'js/ad-killer-install.js',
-                    'minified/ad-killer.js': 'js/ad-killer.js'
+                    'minified/ad-killer-install.min.js': 'js/ad-killer-install.js',
+                    'minified/ad-killer.min.js': 'js/ad-killer.js'
                 }
             }
         }
