@@ -2,6 +2,7 @@
 ==================
 
 一个清除粗暴乱入广告的浏览器标签。
+
 A bookmarklet for web browser to kill rude advertisement.
 
 ##使用方法
