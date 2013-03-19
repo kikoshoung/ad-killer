@@ -7,9 +7,9 @@ A bookmarklet for web browser to kill rude advertisement.
 
 ##使用方法
 
-* 您可以去<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>快速拖动式地添加书签。
+###您可以去<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>快速拖动式地添加书签。
 
-* 也可以使用以下方法添加书签：
+###也可以使用以下方法添加书签：
 
 由于在 README.md 文件中无法设置 href 属性为一段可执行的 javascript 代码（会被 github 自动过滤掉），所以在此使用一种比较麻烦的方法来添加书签，广告杀手书签小程序的启动代码如下：
 
