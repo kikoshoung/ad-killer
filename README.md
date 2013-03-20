@@ -1,31 +1,35 @@
 广告杀手（ad-killer）
 ==================
 
-一个清除粗暴乱入广告的浏览器标签。
+一个清除粗暴乱入广告的浏览器标签小程序。
 
 A bookmarklet for web browser to kill rude advertisement.
 
-##使用方法
+##安装方法
 
-###方法1
+方法1（推荐）
 
-您可以去<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>快速拖动式地添加书签。
+请前往<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>，进行快速拖动式地添加。
 
-###方法2
+方法2（针对某些不支持拖动添加书签的浏览器）
 
-也可以使用以下方法添加书签：
-
-由于在 README.md 文件中无法设置 href 属性为一段可执行的 javascript 代码（会被 github 自动过滤掉），所以在此使用一种比较麻烦的方法来添加书签，广告杀手书签小程序的启动代码如下：
+首先，复制广告杀手书签小程序的启动代码，代码如下：
 
 ```javascript
 	javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var i=document.createElement("script"),e=document.createElement("div"),o=document.body,d=1,n=d?"https://raw.github.com/kikoshoung/ad-killer/master":"http://localhost";i.src=n+"/minified/ad-killer.min.js",e.id="ad-killer-panel",e.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;",e.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",o.appendChild(i),o.appendChild(e)})();
 ```
+然后，将复制的代码作为书签的 URL 手动添加进浏览器的书签栏。
 
-将以上整行代码全部复制，并作为书签的 URL 手动添加进浏览器的书签栏，到此，您已经成功安装了广告杀手这个书签小程序。
+PS：如果书签添加不顺利的话，您可以 google 一下自己使用的浏览器要如何手动添加书签。Chrome 用户可以看下<a target="_blank" href="http://support.google.com/chrome/bin/answer.py?hl=zh-Hans&answer=95739">这里</a>。
 
-现在打开一个目标网页（含广告的网页，如：<a target="_blank" href="http://www.yyets.com">人人影视</a>、<a target="_blank" href="http://www.dytt8.net">电影天堂</a>等），点击一下刚刚手动添加的书签，关注一下屏幕右上角，您就能看到广告杀手在运行了。
 
-PS：如果书签添加不顺利的话，您可以 google 一下自己使用的浏览器要如何手动添加书签。Chrome 用户可以看下<a target="_blank" href="http://support.google.com/chrome/bin/answer.py?hl=zh-Hans&answer=95739">这里</a>
+
+
+##使用方法
+
+安装完广告杀手后，打开一个目标网页（含广告的网页，如：<a target="_blank" href="http://www.yyets.com">人人影视</a>、<a target="_blank" href="http://www.dytt8.net">电影天堂</a>等），在浏览器的书签栏找到刚刚手动添加的广告杀手的书签，点击一下，关注一下屏幕右上角，您就能看到广告杀手在运行了。
+
+PS：如有没有清理掉的广告，可能是由于这些广告是清理工作执行后加载的，这个时候你可以试着再次点击广告杀手来清理，如果还没能清理掉的话，那么，抛开是我的bug的嫌疑的话，就只能是这个广告不在查杀范围内了（广告杀手只清除粗暴乱入的广告）。当然，也很有可能是我的bug，还请看完“关于广告杀手”后轻喷。
 
 ##产生背景
 
@@ -57,4 +61,4 @@ PS：优雅的广告和一些不影响使用的广告我并没有处理。一是
 
 广告杀手的原理其实就是遍历了一下 DOM 结构，然后套用一下黑名单，看当前 DOM 是否有嫌疑。有的话就列入到杀除队列，待到遍历完成之后，将杀除队列的 DOM 全部删除以达到清除广告的效果。
 
-可能大家也发现了，最重要的是黑名单，所以在这里我鼓励大家多多使用“广告杀手”书签，如果当你发现了无法清除的粗暴广告，请及时反馈给我，反馈的功能我随后会加入到书签内，谢谢大家的支持。
+可能大家也发现了，最重要的是黑名单，所以在这里我鼓励大家多多使用“广告杀手”书签，如果当你发现了无法清除的粗暴广告，请及时反馈给我，反馈的功能我随后会加入到书签内，谢谢大家的支持~

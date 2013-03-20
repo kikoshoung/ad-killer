@@ -3,25 +3,34 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8;">
 		<title>Ad-killer Guide</title>
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/base.css">
 		<link rel="stylesheet" type="text/css" href="css/frame.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div class="content-wrapper">
-			<h1>广告杀手（专杀粗暴乱入的广告）</h1>
+			<h1 class="mb-l">广告杀手（ad-killer）</h1>
+			<p>一个清除粗暴乱入广告的浏览器标签小程序。</p>
+			<p>A bookmarklet for web browser to kill rude advertisement.</p>
+			<div class="block">
+				<h2>安装方法</h2>
+				<h4>方法1（推荐）</h4>
+				<p>鼠标拖动此链接：<a target="_blank" href='javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var i=document.createElement("script"),e=document.createElement("div"),o=document.body,d=1,n=d?"https://raw.github.com/kikoshoung/ad-killer/master":"http://localhost";i.src=n+"/minified/ad-killer.min.js",e.id="ad-killer-panel",e.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;",e.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",o.appendChild(i),o.appendChild(e)})();'>广告杀手</a> 到浏览器的书签栏。</p>
+				<h4>方法2（针对某些不支持拖动添加书签的浏览器）</h4>
+				<p>首先，复制广告杀手书签小程序的启动代码，代码如下：</p>
+				<pre class="mb-m">
+					<code>
+javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var i=document.createElement("script"),e=document.createElement("div"),o=document.body,d=1,n=d?"https://raw.github.com/kikoshoung/ad-killer/master":"http://localhost";i.src=n+"/minified/ad-killer.min.js",e.id="ad-killer-panel",e.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;",e.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",o.appendChild(i),o.appendChild(e)})();
+					</code>
+				</pre>
+				<p>然后，将复制的代码作为书签的 URL 手动添加进浏览器的书签栏。</p>
+				<p>PS：如果书签添加不顺利的话，您可以 google 一下自己使用的浏览器要如何手动添加书签。Chrome 用户可以看下<a target="_blank" href="http://support.google.com/chrome/bin/answer.py?hl=zh-Hans&answer=95739">这里</a>。</p>
+			</div>
 			<div class="block">
 				<h2>使用方法</h2>
-				<h4>第1步</h4>
-				<p>将此链接存储为书签：<a href='javascript:(function(){if(window.adKillerByKikoshoung)return window.adKillerByKikoshoung.excu(),void 0;var i=document.createElement("script"),e=document.createElement("div"),o=document.body,d=1,n=d?"https://raw.github.com/kikoshoung/ad-killer/master":"http://localhost";i.src=n+"/minified/ad-killer.min.js",e.id="ad-killer-panel",e.style.cssText="position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;",e.innerHTML="\u6b63\u5728\u4e3a\u60a8\u52a0\u8f7d\u5e7f\u544a\u6740\u624b...",o.appendChild(i),o.appendChild(e)})();'>广告杀手</a>
-				<br/>* 如果你使用Chrome、Firefox等高端浏览器，你可以试着直接拖动链接到浏览器的书签栏来保存书签；第一种方法行不通的浏览器请Google一下如何添加链接到书签。</p>
-				<p></p>
-
-				<h4>第2步</h4>
-				<p>打开你要浏览的页面，如<a target="_blank" href="http://www.yyets.com">人人影视</a>、<a target="_blank" href="http://www.dytt8.net">电影天堂</a></</p>
-				<h4>第3步</h4>
-				<p>来到我们需要的页面后，点击一下刚刚存放的“广告杀手”的书签
-				<br/>* 网速稍微快点儿、电脑配置稍微高点儿，杀除广告那是瞬间的事儿；即使网速、配置不是很叼，那也是秒秒钟的事儿。</p>
+				<p>安装完广告杀手后，打开一个目标网页（含广告的网页，如：<a target="_blank" href="http://www.yyets.com">人人影视</a>、<a target="_blank" href="http://www.dytt8.net">电影天堂</a>等），在浏览器的书签栏找到刚刚手动添加的广告杀手的书签，点击一下，关注一下屏幕右上角，您就能看到广告杀手在运行了。</p>
+				<p>PS：如有没有清理掉的广告，可能是由于这些广告是清理工作执行后加载的，这个时候你可以试着再次点击广告杀手来清理，如果还没能清理掉的话，那么，抛开是我的bug的嫌疑的话，就只能是这个广告不在查杀范围内了（广告杀手只清除粗暴乱入的广告）。当然，也很有可能是我的bug，还请看完“关于广告杀手”后轻喷。</p>
 			</div>
 			<div class="block">
 				<h2>产生背景</h2>
@@ -47,5 +56,26 @@
 				<p>可能大家也发现了，最重要的是黑名单，所以在这里我鼓励大家多多使用“广告杀手”书签，如果当你发现了无法清除的粗暴广告，请及时反馈给我，反馈的功能我随后会加入到书签内，谢谢大家的支持~</p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function codeareaHandler(area){
+				area.each(function(){
+					var thisArea = $(this),
+						codeStr = $.trim(thisArea.text()),
+						codeRows = codeStr.match(/((.*)\n|\n?(.*)\n?)/g),
+						codeRows = codeRows.slice(0, codeRows.length - 1), // ugly method!
+						len = codeRows.length,
+						rowList = '<ul class="code-row-list">',
+						handledCodeStr = '';
+
+					for(var i = 1; i <= len; i++){
+						handledCodeStr += '<p><span class="num">'+ i +'</span>'+ codeRows[i - 1] +'</p>';
+					}
+					rowList += '</ul>';
+					handledCodeStr = '<code>'+ handledCodeStr +'</code>';
+					thisArea.html(handledCodeStr);
+				})
+			}
+			codeareaHandler($('body').find('pre'));
+		</script>
 	</body>
 </html>
