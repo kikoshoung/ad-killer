@@ -34,7 +34,8 @@
 			// for each child in this element
 			for(var i = 0, children = root.children; i < childLength; i++){
 				var child = children[i],
-					// positionType = child.style.position,
+					positionType = child.style.position,
+					parentPositionType = child.parentNode.style.position,
 					position = child.position,
 					suspectableAttr = _getSuspectableAttr(child);
 
@@ -50,8 +51,10 @@
 				// filter out fullscreen elements
 				// if((positionType === 'absolute' || positionType === 'fixed') && _fullscreen[0] === parseInt(child.clientWidth) && _fullscreen[1] <= parseInt(child.clientHeight)){
 				if(_fullscreen[0] === parseInt(child.clientWidth) && _fullscreen[1] <= parseInt(child.clientHeight)){
-					_suspectableDoms.push(child);
-					continue;
+					if(positionType === 'absolute' || positionType === 'fixed' || parentPositionType === 'absolute' || parentPositionType === 'fixed'){
+						_suspectableDoms.push(child);
+						continue;
+					}
 				}
 
 				// rejump in '_domScanner' with argument(this element)
