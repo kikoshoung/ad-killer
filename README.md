@@ -7,11 +7,11 @@ A bookmarklet for web browser to kill rude advertisement.
 
 ##安装方法
 
-方法1（推荐）
+###方法1（推荐）
 
 请前往<a target="_blank" href="http://kikoshoung.me/#ad-killer">我的主页</a>，进行快速拖动式地添加。
 
-方法2（针对某些不支持拖动添加书签的浏览器）
+###方法2（针对某些不支持拖动添加书签的浏览器）
 
 首先，复制广告杀手书签小程序的启动代码，代码如下：
 
