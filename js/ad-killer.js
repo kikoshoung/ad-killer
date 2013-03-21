@@ -1,10 +1,10 @@
 (function(){
 	var killer = window.adKillerByKikoshoung = {},
-		_regexCompany = /(baidu|google|alimama|mediav|sogou)/,
-		_regexVendor = /(000dn|ggmm777|17leyi|37cs|49ko|91hui|91mangrandi|91tiger|14yaa|144gg|a135|arpg2|game3737|mediav|mnwan|qiyou|sogou|twcczhu)/,
-		_suspectableDoms = [],
-		_fullscreen = [document.documentElement.clientWidth, document.documentElement.clientHeight],
-		_panel = {
+		regexCompany = /(baidu|google|alimama|mediav|sogou)/,
+		regexVendor = /(000dn|ggmm777|17leyi|37cs|49ko|91hui|91mangrandi|91tiger|14yaa|144gg|a135|arpg2|game3737|mediav|mnwan|qiyou|sogou|twcczhu)/,
+		suspectableDoms = [],
+		fullscreen = [document.documentElement.clientWidth, document.documentElement.clientHeight],
+		panel = {
 			dom: document.getElementById('ad-killer-panel'),
 			show: function(){
 				this.dom.style.display = 'block';
@@ -20,13 +20,13 @@
 			},
 			completed: function(){
 				var dom = this.dom;
-				dom.innerHTML = '\u5DF2\u4E3A\u60A8\u6E05\u9664\u4E86' + _suspectableDoms.length + '\u4E2A\u6076\u610F\u5E7F\u544A';
+				dom.innerHTML = '\u5DF2\u4E3A\u60A8\u6E05\u9664\u4E86' + suspectableDoms.length + '\u4E2A\u6076\u610F\u5E7F\u544A';
 				dom.style.backgroundColor = 'green';
 			}
 		}
 
 	// a function used to scan the dom tree
-	var _domScanner = function(root){
+	var domScanner = function(root){
 		var childLength = root.children.length;
 
 		// if this element has child element
@@ -37,33 +37,33 @@
 					positionType = child.style.position,
 					parentPositionType = child.parentNode.style.position,
 					position = child.position,
-					suspectableAttr = _getSuspectableAttr(child);
+					suspectableAttr = getSuspectableAttr(child);
 
 				// ignore SCRIPT tags
 				if(child.tagName === 'SCRIPT') continue; 
 
 				// filter out suspectable doms(iframes and other elements)
-				if((child.tagName === 'IFRAME' && suspectableAttr.match(_regexCompany)) || suspectableAttr.match(_regexVendor)) {
-					_suspectableDoms.push(child);
+				if((child.tagName === 'IFRAME' && suspectableAttr.match(regexCompany)) || suspectableAttr.match(regexVendor)) {
+					suspectableDoms.push(child);
 					continue;
 				}
 
 				// filter out fullscreen elements
-				// if((positionType === 'absolute' || positionType === 'fixed') && _fullscreen[0] === parseInt(child.clientWidth) && _fullscreen[1] <= parseInt(child.clientHeight)){
-				if(_fullscreen[0] === parseInt(child.clientWidth) && _fullscreen[1] <= parseInt(child.clientHeight)){
+				// if((positionType === 'absolute' || positionType === 'fixed') && fullscreen[0] === parseInt(child.clientWidth) && fullscreen[1] <= parseInt(child.clientHeight)){
+				if(fullscreen[0] === parseInt(child.clientWidth) && fullscreen[1] <= parseInt(child.clientHeight)){
 					if(positionType === 'absolute' || positionType === 'fixed' || parentPositionType === 'absolute' || parentPositionType === 'fixed'){
-						_suspectableDoms.push(child);
+						suspectableDoms.push(child);
 						continue;
 					}
 				}
 
-				// rejump in '_domScanner' with argument(this element)
+				// rejump in 'domScanner' with argument(this element)
 				arguments.callee(child);
 			}
 		} else return;
 	}
 
-	var _getSuspectableAttr = function(elem){
+	var getSuspectableAttr = function(elem){
 		var str = '';
 		str += elem.id ? elem.id : '';
 		str += elem.className ? elem.className : '';
@@ -76,25 +76,25 @@
 	}
 
 	// kill this ad element. If it has a wrapper, kill its wrapper too
-	var _killSuspectableDoms = function(child){
+	var killSuspectableDoms = function(child){
 		var parent = child.parentNode,
-			suspectableAttr = _getSuspectableAttr(parent);
+			suspectableAttr = getSuspectableAttr(parent);
 		parent.removeChild(child);
-		if(suspectableAttr.match(_regexCompany)) parent.parentNode.removeChild(parent);
+		if(suspectableAttr.match(regexCompany)) parent.parentNode.removeChild(parent);
 	}
 
 	// kill action start from here. Function 'excu' is the only method that export for 'window.adKillerByKikoshoung'
 	killer.excu = function(){
-		_panel.show();
-		_panel.scanning();
-		_domScanner(document.getElementsByTagName('body')[0]);
-		for(var i = 0; i < _suspectableDoms.length; i++){
-			_killSuspectableDoms(_suspectableDoms[i]);
+		panel.show();
+		panel.scanning();
+		domScanner(document.getElementsByTagName('body')[0]);
+		for(var i = 0; i < suspectableDoms.length; i++){
+			killSuspectableDoms(suspectableDoms[i]);
 		}
-		_panel.completed();
-		_suspectableDoms = [];
+		panel.completed();
+		suspectableDoms = [];
 		setTimeout(function(){
-			_panel.hide()
+			panel.hide()
 		}, 2000);
 	}
 	
