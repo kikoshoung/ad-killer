@@ -27,7 +27,7 @@
 
 	// a function used to scan the dom tree
 	var domScanner = function(root){
-		var childLength = root.children.length;
+		var childLength = root.children ? root.children.length : 0;
 
 		// if this element has child element
 		if(childLength){
