@@ -81,6 +81,7 @@
 			suspectableAttr; 
 
 		if(parent){
+			console.log(parent)
 			suspectableAttr = getSuspectableAttr(parent);
 			parent.removeChild(child);
 			if(suspectableAttr.match(regexCompany)) parent.parentNode.removeChild(parent);
