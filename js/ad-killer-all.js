@@ -94,7 +94,7 @@
 		var parent = child.parentNode,
 			suspectableAttr = getSuspectableAttr(parent);
 		parent.removeChild(child);
-		if(suspectableAttr.match(regexCompany)) parent.parentNode.removeChild(parent);
+		if(suspectableAttr.match(regexCompany) && parent.parentNode) parent.parentNode.removeChild(parent);
 	}
 
 	// kill action start from here. Function 'excu' is the only method that export for 'window.adKillerByKikoshoung'
