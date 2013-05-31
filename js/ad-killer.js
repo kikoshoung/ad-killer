@@ -78,9 +78,13 @@
 	// kill this ad element. If it has a wrapper, kill its wrapper too
 	var killSuspectableDoms = function(child){
 		var parent = child.parentNode,
+			suspectableAttr; 
+
+		if(parent){
 			suspectableAttr = getSuspectableAttr(parent);
-		parent.removeChild(child);
-		if(suspectableAttr.match(regexCompany)) parent.parentNode.removeChild(parent);
+			parent.removeChild(child);
+			if(suspectableAttr.match(regexCompany)) parent.parentNode.removeChild(parent);
+		}
 	}
 
 	// kill action start from here. Function 'excu' is the only method that export for 'window.adKillerByKikoshoung'
