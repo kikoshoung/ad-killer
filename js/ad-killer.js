@@ -4,7 +4,7 @@
 (function(){
 	var killer = window.adKillerByKikoshoung = {},
 		regexCompany = /(baidu|google|alimama|mediav|sogou)/,
-		regexVendor = /(000dn|ggmm777|17leyi|37cs|37wan|37youyou|49ko|50qyy|778669|77u|91hui|91mangrandi|91tiger|14yaa|144gg|adroll|a135|arpg2|alimama|baidu|baike|doubleclick|feitian001|game3737|hudong|mediav|mnwan|qiyou|sogou|taobao|twcczhu|youxjia|youle55|yiqifa|unionli|rxwan)/,
+		regexVendor = /(000dn|ggmm777|17leyi|37cs|37wan|37youyou|49ko|50qyy|778669|77u|91hui|91mangrandi|91tiger|14yaa|144gg|adroll|a135|arpg2|alimama|baidu|baike|doubleclick|feitian001|game3737|hudong|mediav|mnwan|qiyou|sogou|taobao|twcczhu|youxjia|youle55|youyou234|yiqifa|unionli|rxwan)/,
 		suspectableDoms = [],
 		fullscreen = [document.documentElement.clientWidth, document.documentElement.clientHeight],
 		panel = {
