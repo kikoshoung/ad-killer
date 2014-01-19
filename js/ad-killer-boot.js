@@ -16,7 +16,7 @@
 	script.src = domain + '/minified/ad-killer.min.js';
 
 	panel.id = 'ad-killer-panel';
-	panel.style.cssText = 'position: fixed; z-index: 9999999999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;';
+	panel.style.cssText = 'position: fixed; z-index: 99999; top: 0; right: 0; padding: 5px 10px; background-color: gold; color: black; font-size: 12px;';
 	panel.innerHTML = '\u6B63\u5728\u4E3A\u60A8\u52A0\u8F7D\u5E7F\u544A\u6740\u624B...';
 
 	body.appendChild(script);
