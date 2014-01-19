@@ -1,3 +1,6 @@
+/* Ad-killer - A bookmarklet for web browser to kill rude advertisement
+ * @author kikoshoung (kikoshoung@gmail.com)
+ */
 (function(){
 	if(window.adKillerByKikoshoung){
 		window.adKillerByKikoshoung.excu();
@@ -19,4 +22,4 @@
 	body.appendChild(script);
 	body.appendChild(panel);
 
-})()
+})();

@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                banner: '/* <%= pkg.name %> - A bookmarklet for web browser to kill rude advertisement\n * @author kikoshoung\n * last modified at <%= grunt.template.today("yyyy-mm-dd hh:MM:ss") %>\n */\n',
+                banner: '/* <%= pkg.name %> - A bookmarklet for web browser to kill rude advertisement\n * @author kikoshoung (kikoshoung@gmail.com)\n * last modified at <%= grunt.template.today("yyyy-mm-dd hh:MM:ss") %>\n */\n',
                 beautify: {
                     ascii_only: true
                 }
